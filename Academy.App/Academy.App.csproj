@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AcademyApp\dist\**" />
+    <Compile Remove="AcademyApp\e2e\**" />
+    <Compile Remove="AcademyApp\out-tsc\**" />
+    <Content Remove="AcademyApp\dist\**" />
+    <Content Remove="AcademyApp\e2e\**" />
+    <Content Remove="AcademyApp\out-tsc\**" />
+    <EmbeddedResource Remove="AcademyApp\dist\**" />
+    <EmbeddedResource Remove="AcademyApp\e2e\**" />
+    <EmbeddedResource Remove="AcademyApp\out-tsc\**" />
+    <None Remove="AcademyApp\dist\**" />
+    <None Remove="AcademyApp\e2e\**" />
+    <None Remove="AcademyApp\out-tsc\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Academy.Api\Academy.Api.csproj" />
+    <ProjectReference Include="..\Academy.DataTransferObject\Academy.DataTransferObject.csproj" />
+    <ProjectReference Include="..\Academy.Service\Academy.Service.csproj" />
+  </ItemGroup>
+
+</Project>
